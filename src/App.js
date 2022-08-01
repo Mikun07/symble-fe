@@ -11,11 +11,13 @@ import { AuthContext } from "./modules/auth/AuthContext";
 
 function App() {
   const[auth, setAuth] = useState("")
+  const[URL, setURL] = useState("")
+
   console.log(auth);
   const token = localStorage.getItem('token')
   
   return (
-    <AuthContext.Provider value={{auth, setAuth}}>
+    <AuthContext.Provider value={{auth, setAuth, URL, setURL}}>
       <Router>
         <Routes>
           <Route element={<PrivateRoutes/>}>

@@ -132,7 +132,7 @@ export default function AuthSignup() {
       <hr className='footer-line'/>
     </div>
     <div className='socials'>
-      <a href='https://spray-dev.herokuapp.com/api/auth/google/signin'>
+      <a href='https://spray-dev.herokuapp.com/api/auth/google/signup'>
         <div>
         <img src={Googleicon} alt=""/>
         </div>

@@ -1,4 +1,4 @@
-import React,{useState} from 'react'
+import React,{useState, useContext} from 'react'
 import symbleLogo from '../../../assets/S.svg';
 import Googleicon from '../../../assets/Google.svg';
 import Facebookicon from '../../../assets/Facebook.svg';
@@ -7,18 +7,24 @@ import eyeslash from '../../../assets/eye-slash.svg';
 import Twittericon from '../../../assets/Twitter.svg';
 import './auth-recovery.styles.css'
 import axios from 'axios';
+import { AuthContext } from '../AuthContext';
 
 export default function AuthRecovery() {
-    // const {setToken}= useContext(AuthContext)
+    const {setToken}= useContext(AuthContext)
     const [email, setEmail] = useState("");
     const [showPassword, setShowPassword] = useState(false)
+    const {setURL} = useContext(AuthContext)
 
     const onSubmit = async (e) => {
         e.preventDefault()
         try {
             if(email){
                 const response =await axios.post('https://spray-dev.herokuapp.com/api/auth/forgot-password',{email:email})
-                setEmail("")
+                console.log(response.data)
+                const {url} = response.data
+                console.log(url);
+                const urlToken = localStorage.setItem('url', url)
+                setURL(urlToken)
             }
         } catch (error) {
           console.log(error);    
