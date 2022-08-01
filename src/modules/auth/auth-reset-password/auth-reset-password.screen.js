@@ -5,17 +5,13 @@ import eyeslash from '../../../assets/eye-slash.svg';
 // import './auth-recovery.styles.css'
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
-import { AuthContext } from '../AuthContext';
 
 export default function AuthResetPassword() {
-    // const {setToken}= useContext(AuthContext)
     const [password, setPassword]= useState("")
     const [confirmPassword, setConfirmPassword]= useState("")
     const [showPassword, setShowPassword] = useState(false)
     const [showPassword1, setShowPassword1] = useState(false)
     const navigate = useNavigate()
-    const {URL} = useContext(AuthContext)
-
 
     const onSubmit = async (e) => {
         e.preventDefault()
@@ -24,8 +20,9 @@ export default function AuthResetPassword() {
               console.log('password does not match');
             }
             if(password === confirmPassword){
-              const getURL = localStorage.getItem('url')
-              const response =await axios.post(`https://spray-dev.herokuapp.com${getURL}`,{confirmPassword:confirmPassword, password:password})
+              const params = new URLSearchParams(window.location.search)
+              params.get('token')
+              const response = await axios.post(`https://spray-dev.herokuapp.com/api/auth/reset-password/?${params}`,{confirmPassword:confirmPassword, password:password})
               console.log('password match');
               setPassword("")
               setConfirmPassword("")
