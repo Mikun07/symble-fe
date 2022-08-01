@@ -22,7 +22,7 @@ export default function AuthResetPassword() {
             }
             if(password === confirmPassword){
               const token = localStorage.getItem('token')
-              const response =await axios.post('https://spray-dev.herokuapp.com/api/auth/reset-password',{confirmPassword:confirmPassword, password:password},{ headers: { Authorization: `Bearer ${token}` } })
+              const response =await axios.post('https://spray-dev.herokuapp.com/api/auth/reset-password',{confirmPassword:confirmPassword, password:password})
               console.log('password match');
               setPassword("")
               setConfirmPassword("")

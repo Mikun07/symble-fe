@@ -24,7 +24,7 @@ function App() {
           <Route path="/login" element={<AuthLogin/>} />
           <Route path="/signup" element={<AuthSignup/>} />
           <Route path="/recovery" element={<AuthRecovery/>} />
-          <Route exact path={`/reset-password/:${token}`} element={<AuthResetPassword/>} />
+          <Route exact path={`/reset-password`} element={<AuthResetPassword/>} />
         </Routes>
       </Router>
     </AuthContext.Provider>
