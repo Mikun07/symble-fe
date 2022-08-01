@@ -1,4 +1,4 @@
-import React,{useEffect, useState} from 'react'
+import React,{ useState} from 'react'
 import symbleLogo from '../../../assets/S.svg';
 import Googleicon from '../../../assets/Google.svg';
 import Facebookicon from '../../../assets/Facebook.svg';

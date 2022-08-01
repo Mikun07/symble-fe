@@ -12,6 +12,7 @@ import { AuthContext } from "./modules/auth/AuthContext";
 function App() {
   const[auth, setAuth] = useState("")
   console.log(auth);
+  const token = localStorage.getItem('token')
   
   return (
     <AuthContext.Provider value={{auth, setAuth}}>
@@ -23,7 +24,7 @@ function App() {
           <Route path="/login" element={<AuthLogin/>} />
           <Route path="/signup" element={<AuthSignup/>} />
           <Route path="/recovery" element={<AuthRecovery/>} />
-          <Route path="/reset-password" element={<AuthResetPassword/>} />
+          <Route exact path={`/reset-password/:${token}`} element={<AuthResetPassword/>} />
         </Routes>
       </Router>
     </AuthContext.Provider>

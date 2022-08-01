@@ -1,17 +1,13 @@
 import React,{useState} from 'react'
 import symbleLogo from '../../../assets/S.svg';
-import Googleicon from '../../../assets/Google.svg';
-import Facebookicon from '../../../assets/Facebook.svg';
 import eye from '../../../assets/eye.svg';
 import eyeslash from '../../../assets/eye-slash.svg';
-import Twittericon from '../../../assets/Twitter.svg';
 // import './auth-recovery.styles.css'
 import axios from 'axios';
 
 export default function AuthResetPassword() {
     // const {setToken}= useContext(AuthContext)
     const [password, setPassword]= useState("")
-    const [password2, setPassword2]= useState("")
     const [confirmPassword, setConfirmPassword]= useState("")
     const [showPassword, setShowPassword] = useState(false)
     const [showPassword1, setShowPassword1] = useState(false)
@@ -23,7 +19,8 @@ export default function AuthResetPassword() {
               console.log('password does not match');
             }
             if(password === confirmPassword){
-              const response =await axios.post('https://spray-dev.herokuapp.com/api/auth/reset-password',{confirmPassword:confirmPassword, password:password})
+              const token = localStorage.getItem('token')
+              const response =await axios.post('https://spray-dev.herokuapp.com/api/auth/reset-password',{confirmPassword:confirmPassword, password:password},{ headers: { Authorization: `Bearer ${token}` } })
               console.log('password match');
               setPassword("")
               setConfirmPassword("")
