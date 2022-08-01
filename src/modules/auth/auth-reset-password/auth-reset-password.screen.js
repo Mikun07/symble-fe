@@ -4,6 +4,7 @@ import eye from '../../../assets/eye.svg';
 import eyeslash from '../../../assets/eye-slash.svg';
 // import './auth-recovery.styles.css'
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 
 export default function AuthResetPassword() {
     // const {setToken}= useContext(AuthContext)
@@ -11,6 +12,7 @@ export default function AuthResetPassword() {
     const [confirmPassword, setConfirmPassword]= useState("")
     const [showPassword, setShowPassword] = useState(false)
     const [showPassword1, setShowPassword1] = useState(false)
+    const navigate = useNavigate()
 
     const onSubmit = async (e) => {
         e.preventDefault()
@@ -24,6 +26,8 @@ export default function AuthResetPassword() {
               console.log('password match');
               setPassword("")
               setConfirmPassword("")
+              navigate("/login")
+              
             }
         } catch (error) {
           console.log(error);    
