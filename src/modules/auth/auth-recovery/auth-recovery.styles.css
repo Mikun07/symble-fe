@@ -1,0 +1,92 @@
+.input-container{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+}
+.password-input-container{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+
+}
+.eye{
+    position: relative;
+    right: 30px;
+}
+.input-field{
+    padding-left: 9px;
+    width: 315px;
+    height: 40px;
+    background-color: none;
+    border: 1px solid #CCCCCC;
+    border-radius: 5px;
+}
+input:focus {
+    outline: none /* Removes the border when the input is clicked */
+  }
+.auth-logo{
+    margin-bottom: 16px;
+    margin-top: 75px;
+}
+.auth-cta{
+    width: 315px;
+    height: 45px;
+    border-radius: 25px;
+    border: none;
+    background: #4059AD;
+    margin-top: 41px;
+}
+.auth-btn-text{
+    color: #EFF2F1;
+    
+}
+.forgot-password{
+
+    margin-top: 5px;
+    font-size: 12px;
+    color: #4059AD;
+    display: flex;
+    align-self:end;
+
+}
+.input-label{
+    font-size: 12px;
+    margin-bottom: 7px;
+}
+.auth-title{
+    font-weight: 700;
+    font-size: 24px;
+    color: #323232;
+    margin-bottom: 12px;
+}
+.auth-grey-text{
+    color: #999999;
+    font-size: 14px;
+    font-weight: 400;
+    margin-bottom: 21px;
+    width: 315px;
+}
+.auth-footer-title{
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    margin-top: 30px;
+    margin-bottom: 50px;
+    
+}
+.auth-footer-text{
+    color: #999999;
+    font-size: 12px;
+    font-weight: 400;
+}
+.footer-line{
+    border: 1px solid #CCCCCC;
+    width: 90px;
+    height: 0px;
+}
+.socials{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 47px;
+}

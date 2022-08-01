@@ -1,13 +1,911 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+* {
+  box-sizing: border-box;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  font-family: Lato;
+  font-style: normal;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+}
+
+/* for the grid */
+.blue-container {
+  position: relative;
+  width: 390px;
+  height: 844px;
+  padding: auto;
+  margin: 0 auto;
+  background: #4059AD;
+}
+
+.container {
+  position: relative;
+  width: 390px;
+  height: 844px;
+  padding: auto;
+  margin: 0 auto;
+  background: #ffffff;
+}
+
+.auth-header {
+  height: 25%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.auth-form {
+  height: 35%;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.auth-footer {
+  height: 14%;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.cat-header {
+  height: 17%;
+}
+
+.cat-body{
+  height: 83%;
+  
+}
+
+.cat-img {
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* for the cartegories */
+.cat-text {
+  position: absolute;
+  width: 315px;
+  height: 74px;
+  left: 30px;
+  top: 56px;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+  display: flex;
+  align-items: center;
+  color: #4059AD;
+}
+
+.cat-disabled {
+  position: absolute;
+  width: 272px;
+  height: 50px;
+  left: 65px;
+  top: 727px;
+  background: #CCCCCC;
+  border-radius: 25px;
+  border: none;
+  outline: none;
+  overflow: hidden;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  /* display: flex; */
+  align-items: center;
+  text-align: center;
+  color: #EFF2F1;
+}
+
+.cat-active {
+  position: absolute;
+  width: 272px;
+  height: 50px;
+  left: 65px;
+  top: 727px;
+  background: #4059AD;
+  border-radius: 25px;
+  border: none;
+  outline: none;
+  overflow: hidden;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  align-items: center;
+  text-align: center;
+  color: #EFF2F1;
+}
+
+
+/* for the symble logo */
+.symbleLogo{
+  width: 18px;
+  height: 38px;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 38px;
+  display: flex;
+  align-items: center;
+}
+
+
+
+.symble-lable {
+  font-weight: 700;
+  font-size: 40px;
+  padding-top: 100%;
+  text-align: center;
+  color: #EFF2F1;
+}
+
+/* the login and signin headers */
+.title {
+  width: 144px;
+  height: 43px;
+  font-weight: bolder;
+  font-size: 24px;
+  line-height: 29px;
+  display: flex;
+  align-items: center;
+  color: #323232;
+}
+
+/* the login and signin anochor tags */
+.red-text {
+  width: 224px;
+  height: 30px;
+  left: 30px;
+  top: 166px;
+  font-weight: lighter;
+  font-size: 14px;
+  line-height: 17px;
+  display: flex;
+  align-items: center;
+  color: #999999
+}
+
+/* for the the pin titles */
+.blue-text {
+  position: absolute;
+  width: 286px;
+  height: 47px;
+  left: 30px;
+  top: 172px;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+  display: flex;
+  align-items: center;
+  color: #6B9AC4;
+}
+
+/* for the the pin titles */
+.light-text {
+  position: absolute;
+  width: 315px;
+  height: 30px;
+  left: 30px;
+  top: 235px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  display: flex;
+  align-items: center;
+  color: #999999;
+}
+
+/* the text in the anchor tag in login and signup */
+.a-text {
+  /* padding-left: 2px; */
+  color: #6B9ACA;
+  text-decoration: none;
+}
+
+/* for the forgot password anchor tag */
+.rev-title {
+  position: absolute;
+  width: 181px;
+  height: 43px;
+  left: 30px;
+  top: 121px;
+  font-weight: bolder;
+  font-size: 24px;
+  line-height: 29px;
+  display: flex;
+  align-items: center;
+  color: #323232;
+}
+
+.rev-red-text {
+  position: absolute;
+  width: 315px;
+  height: 30px;
+  left: 30px;
+  top: 172px;
+  font-weight: lighter;
+  font-size: 14px;
+  line-height: 17px;
+  display: flex;
+  align-items: center;
+  color: #999999;
+}
+
+/* for the forms across all pages */
+.user-label {
+  position: absolute;
+  width: 149px;
+  height: 12px;
+  left: 30px;
+  top: 217px;
+  font-weight: bolder;
+  font-size: 12px;
+  line-height: 14px;
+  display: flex;
+  align-items: center;
+  color: #323232;
+}
+
+.user-input {
+  box-sizing: border-box;
+  position: absolute;
+  padding-left: 5px;
+  width: 315px;
+  height: 40px;
+  font-size: 12px;
+  font-weight: lighter;
+  left: 30px;
+  top: 236px;
+  border: 1px solid #CCCCCC;
+  border-radius: 5px
+}
+
+.sig-user-label {
+  position: absolute;
+  width: 149px;
+  height: 12px;
+  left: 30px;
+  top: 302px;
+  font-weight: bolder;
+  font-size: 12px;
+  line-height: 14px;
+  display: flex;
+  align-items: center;
+  color: #323232;
+}
+
+.sig-user-input {
+  box-sizing: border-box;
+  position: absolute;
+  width: 315px;
+  height: 40px;
+  padding-left: 5px;
+  font-size: 12px;
+  font-weight: lighter;
+  left: 30px;
+  top: 321px;
+  border: 1px solid #CCCCCC;
+  border-radius: 5px;
+}
+
+.sig-password-label-1{
+  position: absolute;
+  width: 149px;
+  height: 12px;
+  left: 30px;
+  top: 387px;
+  font-weight: bolder;
+  font-size: 12px;
+  line-height: 14px;
+  display: flex;
+  align-items: center;
+  color: #323232;
+}
+
+.sig-password-input-1 {
+  padding-left: 5px;
+  box-sizing: border-box;
+  position: absolute;
+  width: 315px;
+  font-size: 12px;
+  font-weight: lighter;
+  height: 40px;
+  left: 30px;
+  top: 406px;
+  border: 1px solid #CCCCCC;
+  border-radius: 5px;
+}
+
+.sig-password-label-2 {
+  position: absolute;
+  width: 149px;
+  height: 12px;
+  left: 30px;
+  top: 472px;
+  font-weight: bolder;
+  font-size: 12px;
+  line-height: 14px;
+  display: flex;
+  align-items: center;
+  color: #323232;
+}
+
+.sig-password-input-2 {
+  padding-left: 5px;
+  box-sizing: border-box;
+  position: absolute;
+  width: 315px;
+  height: 40px;
+  font-size: 12px;
+  font-weight: lighter;
+  left: 30px;
+  top: 491px;
+  border: 1px solid #CCCCCC;
+  border-radius: 5px;
+}
+
+.reset-password-label-1{
+  position: absolute;
+  width: 149px;
+  height: 12px;
+  left: 30px;
+  top: 192px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  display: flex;
+  align-items: center;
+  color: #323232;
+}
+
+.reset-password-input-1 {
+  box-sizing: border-box;
+  position: absolute;
+  width: 315px;
+  height: 40px;
+  font-size: 12px;
+  padding-left: 5px;
+  left: 30px;
+  top: 211px;
+  border: 1px solid #CCCCCC;
+  border-radius: 5px;
+}
+
+.reset-password-label-2 {
+  position: absolute;
+  width: 149px;
+  height: 12px;
+  left: 30px;
+  top: 286px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  display: flex;
+  align-items: center;
+  color: #323232;
+}
+
+.reset-password-input-2 {
+  padding-left: 5px;
+  font-size: 12px;
+  box-sizing: border-box;
+  position: absolute;
+  width: 315px;
+  height: 40px;
+  left: 30px;
+  top: 305px;
+  border: 1px solid #CCCCCC;
+  border-radius: 5px;
+}
+
+.pin-input-1 {
+  box-sizing: border-box;
+  position: absolute;
+  width: 54px;
+  height: 54px;
+  left: 57px;
+  top: 303px;
+  border: 1px solid #999999;
+}
+
+.pin-input-2 {
+  box-sizing: border-box;
+  position: absolute;
+  width: 54px;
+  height: 54px;
+  left: 125px;
+  top: 303px;
+  border: 1px solid #999999;
+}
+
+.pin-input-3 {
+  box-sizing: border-box;
+  position: absolute;
+  width: 54px;
+  height: 54px;
+  left: 193px;
+  top: 303px;
+  border: 1px solid #999999;
+}
+
+.pin-input-4 {
+  box-sizing: border-box;
+  position: absolute;
+  width: 54px;
+  height: 54px;
+  left: 265px;
+  top: 303px;
+  border: 1px solid #999999;
+}
+
+.password-label {
+  position: absolute;
+  width: 149px;
+  height: 12px;
+  left: 30px;
+  top: 306px;
+  font-weight: bolder;
+  font-size: 12px;
+  line-height: 14px;
+  display: flex;
+  align-items: center;
+  color: #323232;
+}
+
+.password-input {
+  box-sizing: border-box;
+  position: absolute;
+  width: 315px;
+  height: 40px;
+  left: 30px;
+  top: 325px;
+  padding-left: 5px;
+  font-weight: lighter;
+  font-size: 12px;
+  border: 1px solid #CCCCCC;
+  border-radius: 5px;
+}
+
+.rev-user-label {
+  position: absolute;
+  width: 149px;
+  height: 12px;
+  left: 30px;
+  top: 233px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  display: flex;
+  align-items: center;
+  color: #323232;
+}
+
+.rev-user-input {
+  box-sizing: border-box;
+  position: absolute;
+  padding-left: 5px;
+  width: 315px;
+  height: 40px;
+  left: 30px;
+  top: 252px;
+  border: 1px solid #CCCCCC;
+  border-radius: 5px;
+}
+
+.rev-text {
+  width: 149px;
+  height: 12px;
+  font-weight: lighter;
+  font-size: 12px;
+  line-height: 14px;
+  display: flex;
+  padding: 10px;
+  margin-left: 53px;
+  align-items: center;
+  text-align: end;
+  color: #4059AD;
+  text-decoration: none;
+}
+
+/* for the buttons on all pages */
+.btn-signin {
+  position: absolute;
+  width: 315px;
+  height: 45px;
+  left: 30px;
+  top: 423px;
+  background: #4059AD;
+  border: none;
+  border-radius: 25px;
+  outline: none;
+  overflow: hidden;
+  color: #EFF2F1;
+}
+
+.sig-btn-signin {
+  position: absolute;
+  width: 315px;
+  height: 45px;
+  left: 29px;
+  top: 578px;
+  background: #4059AD;
+  border-radius: 25px;
+  border: none;
+  outline: none;
+  overflow: hidden;
+  font-weight: bolder;
+  color: #EFF2F1;
+}
+
+.reset-btn-signin {
+  border: none;
+  outline: none;
+  overflow: hidden;
+  position: absolute;
+  width: 315px;
+  height: 45px;
+  left: 30px;
+  top: 406px;
+  background: #4059AD;
+  border-radius: 25px;
+  font-weight: bolder;
+  color: #EFF2F1;
+}
+
+.rev-btn-signin {
+  position: absolute;
+  width: 315px;
+  height: 45px;
+  left: 30px;
+  top: 342px;
+  border: none;
+  outline: none;
+  overflow: hidden;
+  background: #4059AD;
+  border-radius: 25px;
+  font-weight: 700;
+  font-size: 16px;
+  color: #EFF2F1;;
+}
+
+.pin-btn-signin {
+  border: none;
+  outline: none;
+  overflow: hidden;
+  position: absolute;
+  width: 315px;
+  height: 45px;
+  left: 30px;
+  top: 421px;
+  background: #4059AD;
+  border-radius: 25px;
+
+  font-weight: 700;
+  font-size: 16px;
+  color: #EFF2F1;
+}
+
+
+/* the lines in the login ang sign in page */
+.log-line-left {
+  position: absolute;
+  width: 90px;
+  height: 0px;
+  left: 30px;
+  top: 500px;
+  border: 1px solid #CCCCCC;
+}
+
+.sig-line-left {
+  position: absolute;
+  width: 90px;
+  height: 0px;
+  left: 29px;
+  top: 655px;
+  border: 1px solid #CCCCCC;
+}
+
+.log-line-right {
+  position: absolute;
+  width: 90px;
+  height: 0px;
+  left: 256px;
+  top: 500px;
+  border: 1px solid #CCCCCC;
+}
+
+.sig-line-right {
+  position: absolute;
+  width: 90px;
+  height: 0px;
+  left: 255px;
+  top: 655px;
+  border: 1px solid #CCCCCC;
+}
+
+.log-line-text {
+  position: absolute;
+  width: 87px;
+  height: 31px;
+  left: 144px;
+  top: 484px;
+  padding-left: 5px;
+  padding-right: 5px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #999999;
+}
+
+.sig-line-text {
+  position: absolute;
+  width: 87px;
+  height: 31px;
+  left: 143px;
+  top: 639px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  display: flex;
+  padding-left: 5px;
+  padding-right: 5px;
+  align-items: center;
+  text-align: center;
+  color: #999999;
+}
+
+/* for the auth buttons */
+.log-google {
+  border-radius: 50px;
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  left: 76px;
+  top: 530px;
+  background: #FFFFFF;
+  border: 1px solid #EFF2F1;
+}
+
+.sig-google {
+  border-radius: 50px;
+  position: absolute;
+  width: 42px;
+  height: 42px;
+  left: 77px;
+  top: 687px;
+  background: #FFFFFF;
+  border: 1px solid #EFF2F1;
+}
+
+.log-facebook {
+  border-radius: 50px;
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  left: 167px;
+  top: 531px;
+  background: #FFFFFF;
+  border: 1px solid #EFF2F1;
+}
+
+.sig-facebook {
+  border-radius: 50px;
+  position: absolute;
+  width: 42px;
+  height: 42px;
+  left: 166px;
+  top: 686px;
+  background: #FFFFFF;
+  border: 1px solid #EFF2F1;
+}
+
+.log-twitter {
+  border-radius: 50px;
+  border-radius: 50;
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  left: 256px;
+  top: 532px;
+  background: #FFFFFF;
+  border: 1px solid #EFF2F1;
+}
+
+.sig-twitter {
+  border-radius: 50px;
+  position: absolute;
+  width: 42px;
+  height: 42px;
+  left: 255px;
+  top: 687px;
+  background: #FFFFFF;
+  border: 1px solid #EFF2F1;
+}
+
+
+/* for the getting started page */
+.Coinimg {
+  position: absolute;
+  width: 132.76px;
+  height: 130.39px;
+  left: 212.43px;
+  top: 58px;
+  transform: matrix(1, 0.09, -0.1, 1, 2, 5);
+}
+
+.vector1 {
+  position: absolute;
+  width: 99.61px;
+  height: 104.83px;
+  left: 114px;
+  top: 158px;
+  transform: rotate(-4.2deg)
+}
+
+.Phoneimg {
+  position: absolute;
+  width: 149.17px;
+  height: 137.93px;
+  left: 34px;
+  top: 268px;
+  transform: rotate(-10.2deg)
+}
+
+.vector2 {
+  position: absolute;
+  width: 106.61px;
+  height: 113.18px;
+  left: 191px;
+  top: 226px;
+  transform: rotate(-0.85deg);
+}
+
+.get-text-1 {
+  position: absolute;
+  width: 315px;
+  height: 81px;
+  left: 39.6px;
+  top: 491px;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 29px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #EFF2F1;
+}
+
+.get-text-2 {
+  position: absolute;
+  width: 287px;
+  height: 81px;
+  left: 55px;
+  top: 572px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #EFF2F1;
+}
+
+.get-btn {
+  position: absolute;
+  width: 312px;
+  height: 45px;
+  left: 42.5px;
+  top: 662px;
+  background: #EFF2F1;
+  border-radius: 25px;
+  border: none;
+  outline: none;
+  overflow: hidden;
+
+  color: #4059AD;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  align-items: center;
+  text-align: center;
+}
+
+/* for the first onboarding page */
+.img-header {
+  position: absolute;
+  width: 390px;
+  height: 375px;
+  left: 0px;
+  top: 0px;
+
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.screen1-text-1 {
+  position: absolute;
+  width: 270px;
+  height: 48px;
+  left: 64.5px;
+  top: 445px;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+  text-align: center;
+  color: #323232;
+}
+
+.screen1-text-2 {
+  position: absolute;
+  width: 269px;
+  height: 51px;
+  left: 64px;
+  top: 535px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  text-align: center;
+  color: #999999;
+
+}
+
+.slider {
+  position: absolute;
+  width: 35px;
+  height: 4px;
+  left: 185px;
+  top: 639px;
+}
+
+.screen1-text-3 {
+  position: absolute;
+  width: 65px;
+  height: 29px;
+  left: 288px;
+  top: 680px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  color: #4059AD;
+  text-decoration: none;
+}
+
+.screen1-text-4 {
+  position: absolute;
+  width: 65px;
+  height: 29px;
+  left: 20px;
+  top: 680px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  color: #4059AD;
+  text-decoration: none;
+}
+
+@media (max-width: 412px) {
+  .container {
+
+  }
 }

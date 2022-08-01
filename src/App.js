@@ -1,24 +1,32 @@
-import logo from './logo.svg';
+import React,{useState, createContext} from "react";
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import './App.css';
+import AuthLogin from './modules/auth/auth-login/auth-login.screen';
+import AuthRecovery from './modules/auth/auth-recovery/auth-recovery.screen';
+import AuthResetPassword from './modules/auth/auth-reset-password/auth-reset-password.screen';
+import AuthSignup from './modules/auth/auth-signup/auth-signup.screen';
+import PrivateRoutes from "./PrivateRoutes";
+import Cartegories from "./modules/cartegories/Cartegories";
+import { AuthContext } from "./modules/auth/AuthContext";
 
 function App() {
+  const[auth, setAuth] = useState("")
+  console.log(auth);
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <AuthContext.Provider value={{auth, setAuth}}>
+      <Router>
+        <Routes>
+          <Route element={<PrivateRoutes/>}>
+            <Route exact path="/" element={<Cartegories/>} />
+          </Route>
+          <Route path="/login" element={<AuthLogin/>} />
+          <Route path="/signup" element={<AuthSignup/>} />
+          <Route path="/recovery" element={<AuthRecovery/>} />
+          <Route path="/reset-password" element={<AuthResetPassword/>} />
+        </Routes>
+      </Router>
+    </AuthContext.Provider>
   );
 }
 
