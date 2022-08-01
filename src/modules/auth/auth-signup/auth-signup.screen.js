@@ -20,7 +20,6 @@ export default function AuthSignup() {
   const [showPassword1, setShowPassword1] = useState(false)
 
 
-
   const onSubmit = async (e) => {
     e.preventDefault()
     try {
@@ -29,7 +28,10 @@ export default function AuthSignup() {
       setEmail("");
       setPassword("");
       setPassword2("");
-      setUsername("");      
+      setUsername("");
+      setTimeout(() => {
+        window.location.href = '/login';
+      }, 1000);
     } catch (error) {
       console.log(error);
       
