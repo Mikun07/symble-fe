@@ -7,7 +7,8 @@ import AuthResetPassword from './modules/auth/auth-reset-password/auth-reset-pas
 import AuthSignup from './modules/auth/auth-signup/auth-signup.screen';
 import PrivateRoutes from "./PrivateRoutes";
 import Cartegories from "./modules/cartegories/Cartegories";
-
+import GeneralInfo from './modules/event/general-info/general-info.screen';
+import EventSetting from "./modules/event/event-setting/event-setting.screen";
 import { AuthContext } from "./modules/auth/AuthContext";
 import Home from "./modules/Home/home.screen";
 
@@ -29,6 +30,8 @@ function App() {
           <Route path="/signup" element={<AuthSignup/>} />
           <Route path="/recovery" element={<AuthRecovery/>} />
           <Route path="/home" element={<Home/>} />
+          <Route path="/generalinfo" element={<GeneralInfo/>} />
+          <Route path="/eventsetting" element={<EventSetting/>} />
           <Route exact path={`/reset-password`} element={<AuthResetPassword/>} />
         </Routes>
       </Router>
