@@ -8,6 +8,7 @@ import AuthSignup from './modules/auth/auth-signup/auth-signup.screen';
 import PrivateRoutes from "./PrivateRoutes";
 import Cartegories from "./modules/cartegories/Cartegories";
 import { AuthContext } from "./modules/auth/AuthContext";
+import Home from "./modules/Home/home.screen";
 
 function App() {
   const[auth, setAuth] = useState("")
@@ -26,6 +27,7 @@ function App() {
           <Route path="/login" element={<AuthLogin/>} />
           <Route path="/signup" element={<AuthSignup/>} />
           <Route path="/recovery" element={<AuthRecovery/>} />
+          <Route path="/home" element={<Home/>} />
           <Route exact path={`/reset-password`} element={<AuthResetPassword/>} />
         </Routes>
       </Router>

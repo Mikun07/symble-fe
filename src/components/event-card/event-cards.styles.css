@@ -1,0 +1,53 @@
+.card-container{
+    min-width: 190px;
+    height: 270px;
+    border-radius: 10px;
+    background-color: red;
+    border-radius: 10px solid pink;
+    position: relative;
+}
+.event-status{
+    padding-top: 2.5px;
+    color: white;
+    width: 86px;
+    height: 22px;
+    text-align: center;
+    font-size: 12px;
+    border-radius: 5px;
+    position: absolute;
+    top: 14px;
+    right: 15px;
+    background: linear-gradient(102.88deg, #4059AD -6.27%, #97D8C4 103.26%);;
+
+}
+.username-price{
+    font-size: 12px;
+    color: white;
+}
+.event-price{
+    color: #F4B942;
+}
+.event-name{
+    color: white;
+    font-size: 16px;
+}
+.event-info{
+    position: absolute;
+    left: 14px;
+    bottom: 14px;
+}
+.cards-flex-scroll{
+    padding-left:20px;
+    padding-right:20px;
+    display: flex;
+    gap: 39px;
+    max-width: 400px;
+    overflow-x: auto;
+    margin-top: 10px;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+.cards-flex-scroll::-webkit-scrollbar {
+    width: 0;
+    display: none;
+}
