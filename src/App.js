@@ -7,6 +7,7 @@ import AuthResetPassword from './modules/auth/auth-reset-password/auth-reset-pas
 import AuthSignup from './modules/auth/auth-signup/auth-signup.screen';
 import PrivateRoutes from "./PrivateRoutes";
 import Cartegories from "./modules/cartegories/Cartegories";
+
 import { AuthContext } from "./modules/auth/AuthContext";
 import Home from "./modules/Home/home.screen";
 
