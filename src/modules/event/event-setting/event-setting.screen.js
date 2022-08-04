@@ -7,16 +7,16 @@ export default function EventSetting() {
     return(
         <div className="container">
             {/* header */}
-            <div className="event-header">
-                <img className="close-btn" src={Close} alt="" />
+                <div className="event-header">
+                    <img className="close-btn" src={Close} alt="" />
 
-                <img className="back-btn" src={RightArrow} alt="" />
+                    <img className="back-btn" src={RightArrow} alt="" />
 
-                <p className="setting-title">
-                    New event
-                </p>
-            </div>
-        {/* header */}
+                    <p className="setting-title">
+                        New event
+                    </p>
+                </div>
+            {/* header */}
         {/* body */}
             <div className="event-body">
                     <form>

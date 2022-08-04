@@ -9,6 +9,7 @@ import PrivateRoutes from "./PrivateRoutes";
 import Cartegories from "./modules/cartegories/Cartegories";
 import GeneralInfo from './modules/event/general-info/general-info.screen';
 import EventSetting from "./modules/event/event-setting/event-setting.screen";
+import OtherEvent from "./modules/event/other-event/other-event.screen";
 import { AuthContext } from "./modules/auth/AuthContext";
 import Home from "./modules/Home/home.screen";
 
@@ -32,6 +33,7 @@ function App() {
           <Route path="/home" element={<Home/>} />
           <Route path="/generalinfo" element={<GeneralInfo/>} />
           <Route path="/eventsetting" element={<EventSetting/>} />
+          <Route path="/otherevent" element={<OtherEvent/>} />
           <Route exact path={`/reset-password`} element={<AuthResetPassword/>} />
         </Routes>
       </Router>
