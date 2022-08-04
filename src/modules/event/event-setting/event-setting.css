@@ -1,0 +1,133 @@
+.back-btn {
+    position: relative;
+    top: 35px;
+    left: -15px;
+}
+
+.close-btn {
+    position: relative;
+    padding: 3%;
+  
+    left: 350px;
+    top: 12px;
+}
+
+.setting-title {
+    padding-left: 40px;
+    width: 186px;
+    height: 46px;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 29px;
+    display: flex;
+    align-items: center;
+    color: #323232;
+}
+
+.set-txt {
+    position: relative;
+    width: 193px;
+    height: 27px;
+    left: 20px;
+    top: 24px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 17px;
+    display: flex;
+    align-items: center;
+    color: #323232;
+}
+
+/* .radio {
+    display: flex;
+    flex-direction: row;
+
+    padding-top: 22px;
+    padding-left: 30px;
+    /* margin: 3px; */
+    /* align-items: center; */
+/* } */ 
+
+.radio-free {
+    position: relative;
+    color: #EFF2F1;
+    top: 30px;
+    left: 30px;
+}
+
+.radio-paid {
+    position: relative;
+    color: #EFF2F1; 
+    top: -6px;
+    left: 100px; 
+}
+
+.radio-paid-1 {
+    position: relative;
+    color: #EFF2F1; 
+    top: -6px;
+    left: 200px; 
+}
+
+.radio-free-txt {
+    position: relative;
+    top: 11px;
+    left: 45px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    display: flex;
+    align-items: center;
+    color: #323232;
+}
+
+.radio-paid-txt {
+    position: relative;
+    top: -24px;
+    left: 115px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    display: flex;
+    align-items: center;
+    color: #323232; 
+}
+
+.radio-paid-txt-1 {
+    position: relative;
+    top: -24px;
+    left: 215px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    display: flex;
+    align-items: center;
+    color: #323232; 
+}
+
+.hr-1 {
+    position: relative;
+    width: 318px;
+    height: 0px;
+    left: 21px;
+    top: 8px;
+
+    border: 1px solid #EFF2F1;
+
+}
+
+.event-disable {
+    position: relative;
+  
+    width: 315px;
+    height: 45px;
+    left: 30px;
+    top: 43px;
+    background: #CCCCCC;
+    border: none;
+    border-radius: 25px;
+    outline: none;
+    overflow: hidden;
+    color: #EFF2F1;
+  }
+
