@@ -1,0 +1,128 @@
+.header-text {
+    padding: 30px;
+    padding-top: 50px;
+    display: flex;
+    flex-direction: column;
+}
+
+.blue-txt {
+    padding: 5px;
+    color: #4059AD;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 29px;
+    display: flex;
+    align-items: center;
+}
+
+.blak-txt {
+    padding: 5px;
+    padding-top: 2px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    display: flex;
+    align-items: center;
+    color: #000000;
+}
+
+.icon {
+    color: #4059AD;
+    font-size: 14px;
+    box-sizing: 50%;
+}
+
+.edit-txt {
+    color: #4059AD;
+    padding: 5px;
+    padding-left: 300px;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    display: flex;
+}
+
+.icon-edit {
+    padding-right: 5px;
+
+}
+
+.body-text {
+    padding: 20px;
+    padding-top: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 15px;
+}
+
+.img-pic {
+    padding: 10px;
+    border-radius: 11px;
+}
+
+.blak-txts {
+    padding-left: 15px;
+    padding-top: 10px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 17px;
+    display: flex;
+    align-items: center;
+    color: #000000;
+}
+
+.black-txts {
+    padding-left: 10px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    display: flex;
+    align-items: center;
+    color: #000000;
+}
+
+.file-icon {
+    padding-left: 15px;
+    color: #999999;
+}
+
+.blu-text {
+    padding: 5px;
+    color: #4059AD;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    display: flex;
+    align-items: center;
+}
+
+.QR-btn {
+    margin: 10px;
+    padding: 5px;
+    border: 1px solid #4059AD;
+    border-radius: 25px;
+    background-color: #FFFFFF;
+    color: #4059AD;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    box-sizing: border-box;
+    width: 150px;
+    height: 34px;
+}
+
+.btn-active {
+    margin-top: 60px;
+    margin-left: 50px;
+    color: #FFFFFF;
+    border-radius: 25px;
+    outline: none;
+    border: none;
+    overflow: hidden;
+    width: 286px;
+    height: 45px;
+    align-items: center;
+    background-color: #4059AD;
+}
+
